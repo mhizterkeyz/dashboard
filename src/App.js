@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navigation from "./components/navigation";
+import Header from "./components/header";
 
-function App() {
+const navInitials = [
+  {
+    initial: "pn",
+    theme: "blue",
+  },
+  {
+    initial: "jl",
+    theme: "green",
+  },
+  {
+    initial: "lg",
+    theme: "purple",
+  },
+  {
+    initial: "aw",
+    theme: "orange",
+  },
+  {
+    initial: "sa",
+    theme: "darkish",
+  },
+];
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation initials={navInitials} />
+      <Header hasNotifications={true} />
+      <div className="main-wrapper"></div>
     </div>
   );
-}
+};
 
 export default App;

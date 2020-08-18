@@ -1,0 +1,91 @@
+.fixed-header {
+  margin-left: 70px;
+  background: #fbfbfb;
+}
+.fixed-header .inner-wrapper {
+  max-width: 1344px;
+  margin: auto;
+  padding: 10px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fixed-header .menu .icon {
+  cursor: pointer;
+}
+.fixed-header .icon {
+  height: 20px;
+  max-height: 100%;
+}
+.brand .icon {
+  height: 30px;
+  margin-right: 10px;
+}
+.brand .tagline {
+  font-weight: 900;
+  display: inline-flex;
+  align-items: flex-end;
+}
+.searchForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #2e2e2e1a;
+  padding-left: 50px;
+  width: 400px;
+}
+.search-icon {
+  width: 20px;
+}
+.searchForm input {
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  background: transparent;
+  padding-left: 12px;
+  outline: none;
+  width: 100%;
+}
+.notification {
+  position: relative;
+}
+.notification::after {
+  content: " ";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  right: 3px;
+  border: 2px solid #fbfbfb;
+  background: #e13071;
+  border-radius: 50%;
+}
+.notification.has-notification::after {
+  visibility: visible;
+  opacity: 1;
+}
+.badge {
+  background: #4dbd98;
+  align-items: flex-end;
+}
+.owner-badge img {
+  width: 20px;
+}
+.user-corner {
+  display: flex;
+}
+.name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.email {
+  font-weight: 600;
+  font-size: 10px;
+  color: #23b3e8;
+}
+.user-corner .bio {
+  flex-direction: column;
+  align-items: flex-start;
+}
