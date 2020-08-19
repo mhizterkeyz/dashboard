@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Navigation from "./components/navigation";
 import Header from "./components/header";
+import BodyNavigation from "./components/body-navigation";
 
 const navInitials = [
   {
@@ -31,7 +32,11 @@ const App = () => {
     <div className="App">
       <Navigation initials={navInitials} />
       <Header hasNotifications={true} />
-      <div className="main-wrapper"></div>
+      <div className="main-wrapper">
+        <div className="container">
+          <BodyNavigation />
+        </div>
+      </div>
     </div>
   );
 };
