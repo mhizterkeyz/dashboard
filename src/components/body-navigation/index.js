@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import "./style.css";
 import clock from "../../svg/clock.svg";
+import calender from "../../svg/calender.svg";
 
-const BodyNavigation = () => {
+const BodyNavigation = ({ bin }) => {
   const [allModules, setAllModules] = useState(true);
   return (
     <div className="body-nav">
@@ -18,7 +20,7 @@ const BodyNavigation = () => {
         </li>
         <li className="nav-item">
           <a className="nav-link active" href="#link">
-            Modules
+            {bin ? "Tests" : "Modules"}
           </a>
         </li>
         <li className="nav-item">
@@ -33,8 +35,10 @@ const BodyNavigation = () => {
         </li>
       </ul>
 
-      <div class="utilities center-content">
-        <div className="group center-content-inline mr-5">
+      <div className="utilities center-content">
+        <div
+          className={`group center-content-inline mr-5 ${bin ? "d-none" : ""}`}
+        >
           <span className="mr-3 all-text">All Task</span>
           <div className="switch-input mr-3">
             <input
@@ -50,8 +54,14 @@ const BodyNavigation = () => {
         </div>
 
         <div className="group center-content-inline">
-          <img src={clock} alt="clock icon" className="icon mr-3" />
-          <span className="project">Project Deadline : 6 weeks</span>
+          <img
+            src={bin ? calender : clock}
+            alt="clock icon"
+            className="icon mr-3"
+          />
+          <span className="project">
+            Project Deadline : {bin ? "10-june-2020" : "6 weeks"}
+          </span>
         </div>
       </div>
     </div>

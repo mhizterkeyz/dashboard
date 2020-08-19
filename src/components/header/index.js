@@ -7,9 +7,9 @@ import bell from "../../svg/bell.svg";
 import shield from "../../svg/shield.svg";
 import badge from "../../svg/badge.svg";
 import chevron from "../../svg/chevron-down.svg";
-import user from "../../images/prf1.jpg";
+import ellip from "../../svg/ellip.svg";
 
-const Header = ({ hasNotifications }) => {
+const Header = ({ hasNotifications, profile }) => {
   return (
     <header className="fixed-top fixed-header">
       <div className="inner-wrapper">
@@ -18,9 +18,9 @@ const Header = ({ hasNotifications }) => {
         </div>
         <div className="brand">
           <img src={fcmb} alt="fcmb logo" className="icon" />
-          <span className="tagline">
+          <span className="tagline center-content-inline align-items-center">
             <span className="mr-2">FCMB: Mobile Banking</span>{" "}
-            <span className="mb-1">...</span>
+            <img alt="icon" src={ellip} />
           </span>
         </div>
         <form className="searchForm">
@@ -42,10 +42,10 @@ const Header = ({ hasNotifications }) => {
           <img src={badge} alt="badge icon" />
         </div>
         <div className="user-corner center-content">
-          <img src={user} alt="avatar" />
+          <img src={profile.avatar} alt="avatar" />
           <div className="px-4 bio center-content">
-            <span className="d-block name">Chioma Davis</span>
-            <span className="email">Chioma@natterbase</span>
+            <span className="d-block name">{profile.name}</span>
+            <span className="email">{profile.email}</span>
           </div>
           <img src={chevron} alt="icon" className="icon" />
         </div>

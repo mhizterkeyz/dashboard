@@ -2,10 +2,6 @@ import React from "react";
 import "./style.css";
 import logo from "../../svg/logo.svg";
 import ntv from "../../svg/nav-toggle-vector.svg";
-import home from "../../svg/home.svg";
-import projects from "../../svg/projects.svg";
-import users from "../../svg/users.svg";
-import max from "../../svg/max-icon.svg";
 
 const Nav = (() => {
   let navCount = 0;
@@ -33,26 +29,14 @@ const Nav = (() => {
   };
 })();
 
-const Navigation = ({ initials }) => {
-  const nav = [
-    {
+const Navigation = ({ initials, nav }) => {
+  nav = nav.map((elem) => {
+    return {
       link: "#link",
-      content: <img className="icon" alt="nav icon home" src={home} />,
-    },
-    {
-      link: "#link",
-      content: <img className="icon" alt="nav icon home" src={projects} />,
-      isActive: true,
-    },
-    {
-      link: "#link",
-      content: <img className="icon" alt="nav icon home" src={users} />,
-    },
-    {
-      link: "#link",
-      content: <img className="icon" alt="nav icon home" src={max} />,
-    },
-  ];
+      content: <img className="icon" alt="nav icon" src={elem.icon} />,
+      isActive: elem.active,
+    };
+  });
   return (
     <nav className="app-navigation">
       <section className="navigation-section">
