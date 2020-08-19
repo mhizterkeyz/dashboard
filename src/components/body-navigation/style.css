@@ -24,6 +24,9 @@
   border-bottom: 1px solid #f15832;
   color: #f15832 !important;
 }
+/*
+* Switch input
+*/
 .switch-input {
   width: 30px;
   height: 15px;

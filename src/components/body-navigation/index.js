@@ -4,7 +4,11 @@ import clock from "../../svg/clock.svg";
 import calender from "../../svg/calender.svg";
 
 const BodyNavigation = ({ bin }) => {
+  /**
+   * Switch state on modules page
+   */
   const [allModules, setAllModules] = useState(true);
+
   return (
     <div className="body-nav">
       <ul className="nav">
