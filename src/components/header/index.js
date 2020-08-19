@@ -9,12 +9,12 @@ import badge from "../../svg/badge.svg";
 import chevron from "../../svg/chevron-down.svg";
 import ellip from "../../svg/ellip.svg";
 
-const Header = ({ hasNotifications, profile }) => {
+const Header = ({ hasNotifications, profile, toggle }) => {
   return (
     <header className="fixed-top fixed-header">
       <div className="inner-wrapper">
         <div className="menu">
-          <img src={menu} alt="menu icon" className="icon" />
+          <img src={menu} onClick={toggle} alt="menu icon" className="icon" />
         </div>
         <div className="brand">
           <img src={fcmb} alt="fcmb logo" className="icon" />

@@ -12,15 +12,20 @@ const App = () => {
   const [nav, setNav] = useState([]);
   const [profile, setProfile] = useState({});
   const [toggle, setToggle] = useState(false);
+  const [sideBar, setSideBar] = useState(true);
 
   const handleNav = (data) => setNav(data);
   const handleProfile = (data) => setProfile(data);
 
   return (
     <Router>
-      <div className="App">
+      <div className={`App ${sideBar ? "hide-side-bar" : ""}`}>
         <Navigation initials={navInitials} nav={nav} />
-        <Header hasNotifications={true} profile={profile} />
+        <Header
+          hasNotifications={true}
+          toggle={() => setSideBar(!sideBar)}
+          profile={profile}
+        />
         <div className="main-wrapper">
           <div className="container">
             <BodyNavigation bin={toggle} />

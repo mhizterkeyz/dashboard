@@ -1,9 +1,26 @@
 .fixed-header {
   margin-left: 70px;
   background: #fbfbfb;
+  overflow-x: auto;
+}
+.hide-side-bar .fixed-header {
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  .fixed-header {
+    margin-left: 70px !important;
+  }
+}
+.fixed-header::-webkit-scrollbar {
+  height: 5px;
+}
+.fixed-header::-webkit-scrollbar-thumb {
+  background: #e8e7ea33;
+  border-radius: 10px;
 }
 .fixed-header .inner-wrapper {
   max-width: 1344px;
+  min-width: 1200px;
   margin: auto;
   padding: 10px 32px;
   display: flex;

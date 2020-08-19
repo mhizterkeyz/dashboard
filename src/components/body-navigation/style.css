@@ -1,8 +1,20 @@
 .body-nav {
+  width: 100%;
+  overflow-x: auto;
+}
+.body-nav::-webkit-scrollbar {
+  height: 5px;
+}
+.body-nav::-webkit-scrollbar-thumb {
+  background: #e8e7ea33;
+  border-radius: 10px;
+}
+.body-nav-contents {
   border-bottom: 1px solid #a5a4a433;
   padding-bottom: 5px;
   display: flex;
   align-items: center;
+  min-width: 1039px;
   justify-content: space-between;
 }
 .body-nav .nav-item {

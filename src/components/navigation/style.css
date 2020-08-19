@@ -9,7 +9,17 @@
   overflow-y: auto;
   overflow-x: hidden;
   width: 70px;
+  transition: left 0.2s ease-in-out;
   background: var(--dark, #052231);
+  z-index: 99999999999999999999999999999999999999;
+}
+.hide-side-bar .app-navigation {
+  left: -70px;
+}
+@media (min-width: 992px) {
+  .app-navigation {
+    left: 0 !important;
+  }
 }
 .app-navigation::-webkit-scrollbar {
   width: 5px;

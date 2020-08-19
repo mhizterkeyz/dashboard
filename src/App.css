@@ -44,6 +44,14 @@ img.icon {
   min-height: 100vh;
   padding: 25px 0;
 }
+.hide-side-bar .main-wrapper {
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  .main-wrapper {
+    margin-left: 70px !important;
+  }
+}
 
 .app-alert {
   position: fixed;
