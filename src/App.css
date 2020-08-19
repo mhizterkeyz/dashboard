@@ -43,6 +43,7 @@ img.icon {
   background: #e5e5e5;
   min-height: 100vh;
   padding: 25px 0;
+  transition: margin-left 0.2s ease-in-out;
 }
 .hide-side-bar .main-wrapper {
   margin-left: 0;

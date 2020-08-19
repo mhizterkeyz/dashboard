@@ -2,6 +2,7 @@
   margin-left: 70px;
   background: #fbfbfb;
   overflow-x: auto;
+  transition: margin-left 0.2s ease-in-out;
 }
 .hide-side-bar .fixed-header {
   margin-left: 0;
