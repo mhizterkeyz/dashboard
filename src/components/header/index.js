@@ -36,7 +36,7 @@ const Header = ({ hasNotifications, profile, toggle }) => {
         </div>
         <div className="badge center-content p-2 text-light">
           <img src={shield} alt="shield icon" className="pr-2" />
-          OWNER
+          <span>OWNER</span>
         </div>
         <div className="owner-badge">
           <img src={badge} alt="badge icon" />

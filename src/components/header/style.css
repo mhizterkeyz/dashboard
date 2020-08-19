@@ -91,6 +91,10 @@
 .owner-badge img {
   width: 20px;
 }
+.badge span {
+  border-left: 1px solid #fcfcfc26;
+  padding-left: 3px;
+}
 .user-corner {
   display: flex;
 }
